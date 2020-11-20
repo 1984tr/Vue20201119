@@ -2,45 +2,62 @@
   <div class="container">
     <div>
       <Logo />
-      <vue-flip active-click class="card">
-        <template v-slot:front> <div class="front1">front</div> </template>
-        <template v-slot:back> <div class="back1">back</div> </template>
-      </vue-flip>
+      <h1 class="title">nbt20201211</h1>
+      <div class="links">
+        <a
+          href="https://nuxtjs.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button--green"
+        >
+          Documentation
+        </a>
+        <a
+          href="https://github.com/nuxt/nuxt.js"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button--grey"
+        >
+          GitHub
+        </a>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import VueFlip from 'vue-flip'
-export default {
-  name: 'index',
-  components: { VueFlip }
-}
+export default {}
 </script>
 
-<style lang="scss" scoped>
-.card {
-  width: 300px;
-  height: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.back1 {
+<style>
+.container {
+  margin: 0 auto;
+  min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: #fff;
-  width: 300px;
-  height: 300px;
-  background-color: #ffc107;
+  align-items: center;
+  text-align: center;
 }
-.front1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  width: 300px;
-  height: 300px;
-  background-color: #673ab7;
+
+.title {
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  display: block;
+  font-weight: 300;
+  font-size: 100px;
+  color: #35495e;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-weight: 300;
+  font-size: 42px;
+  color: #526488;
+  word-spacing: 5px;
+  padding-bottom: 15px;
+}
+
+.links {
+  padding-top: 15px;
 }
 </style>
